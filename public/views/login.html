@@ -1,0 +1,31 @@
+<div class="jumbotron transparant">
+
+    <div ng-show="vmAuth.error" class="alert alert-danger row">
+        <span>{{ vmAuth.error.message }}</span>
+    </div>
+
+    <h1><span class="fa fa-sign-in"></span> Se connecter</h1>
+
+    <!-- LOGIN FORM -->
+    <form ng-submit="vmAuth.logIn()">
+        <div class="form-group">
+            <label>Nom d'utilisateur</label>
+            <input type="text" class="form-control" placeholder="Nom d'utilisateur"
+                   ng-model="vmAuth.user.username" required/>
+        </div>
+        <div class="form-group">
+            <label>Mot de passe</label>
+            <input type="password" class="form-control" placeholder="Mot de passe"
+                   ng-model="vmAuth.user.password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Se connecter</button>
+    </form>
+
+    <hr>
+
+    <p>Créer un compte? <a href="/register">Régistrer</a></p>
+
+    <p>Allez à la <a href="/">page d'acceuil</a>.</p>
+
+</div>

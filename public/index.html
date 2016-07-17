@@ -17,6 +17,8 @@
 <body>
   <body ng-app="SimGameApp">
   <div class="container">
+    <!-- HEADER -->
+    <navbar></navbar>
 
     <!-- ANGULAR DYNAMIC CONTENT -->
     <div ui-view></div>
@@ -33,5 +35,10 @@
   <!-- ANGULAR CUSTOM -->
   <script src="js/app.js"></script>
   <script src="js/appRoutes.js"></script>
+  <script src="js/controllers/authController.js"></script>
+  <script src="js/controllers/homeController.js"></script>
+  <script src="js/controllers/navController.js"></script>
+  <script src="js/factories/authFactory.js"></script>
+  <script src="js/directives/navbar.js"></script>
 </body>
 </html>

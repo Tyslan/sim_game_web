@@ -1,6 +1,13 @@
 <!-- public/views/home.html -->
 <div class="jumbotron text-center transparant">
-  <h1>Journée française</h1>
+  <h1>Le meilleur maire</h1>
 
-  <p>This will hold a list of buildings and an editor for buildings</p>
+  <h3>Règles du jeu<h3>
+  <p>1. </p>
+
+  <div ng-show="vmMain.isLoggedIn()">
+        <h2>Créer de nouveaux bâtiments:</h2>
+
+        <a href="/createbuilding" class="btn btn-default"><span class="fa fa-user"></span> Créer bâtiment</a>
+  </div>
 </div>
