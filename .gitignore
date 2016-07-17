@@ -4,3 +4,5 @@ public/libs/
 .idea/
 .tmp/
 dist/
+
+*.log
