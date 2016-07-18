@@ -8,4 +8,6 @@ var Building = require('./../models/building');
 
 Building.methods(['get', 'put', 'post', 'delete']);
 
+Building.register(router, '/buildings');
+
 module.exports = router;

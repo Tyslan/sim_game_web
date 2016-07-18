@@ -1,0 +1,70 @@
+<div class="jumbotron">
+    <h1><span class="fa fa-sign-in"></span> Créer un bâtiment</h1>
+
+    <div ng-show="vmAddBuilding.error" class="alert alert-danger row">
+        <span>{{ vmAddBuilding.error.message }}</span>
+    </div>
+
+    <div ng-show="vmAddBuilding.succes" class="alert alert-success row">
+        <span>{{ vmAddBuilding.succes }}</span>
+    </div>
+
+    <!-- Add Building FORM -->
+    <form name="BuildingForm" ng-submit="vmAddBuilding.addBuilding()">
+        <div class="form-group">
+            <label>Nom</label>
+            <input type="text" class="form-control" placeholder="Nom"
+                   ng-model="vmAddBuilding.Building.name" required/>
+        </div>
+
+        <div class="form-group">
+            <label>Déscription</label>
+            <input type="text" class="form-control" placeholder="Déscription"
+                   ng-model="vmAddBuilding.Building.description"/>
+        </div>
+
+        <div class="form-group">
+            <label>Population de base</label>
+            <input type="text" class="form-control" placeholder="Population de base"
+                   ng-model="vmAddBuilding.Building.basePopulation" required="Number"/>
+        </div>
+
+        <div class="form-group">
+            <label>Touristes de base</label>
+            <input type="text" class="form-control" placeholder="Touristes de base"
+                   ng-model="vmAddBuilding.Building.baseTourists" required="Number"/>
+        </div>
+
+        <div class="form-group">
+            <label>Revenus de base</label>
+            <input type="text" class="form-control" placeholder="Revenus de base"
+                   ng-model="vmAddBuilding.Building.baseIncome" required="Number"/>
+        </div>
+
+        <div class="form-group">
+            <label>Population par tour</label>
+            <input type="text" class="form-control" placeholder="Population par tour"
+                   ng-model="vmAddBuilding.Building.turnPopulation" required="Number"/>
+        </div>
+
+        <div class="form-group">
+            <label>Touristes par tour</label>
+            <input type="text" class="form-control" placeholder="Touristes par tour"
+                   ng-model="vmAddBuilding.Building.turnTourists" required="Number"/>
+        </div>
+
+        <div class="form-group">
+            <label>Revenus par tour</label>
+            <input type="text" class="form-control" placeholder="Revenus par tour"
+                   ng-model="vmAddBuilding.Building.turnIncome" required="Number"/>
+        </div>
+
+        <div class="form-group">
+            <label>Prix</label>
+            <input type="text" class="form-control" placeholder="Prix"
+                   ng-model="vmAddBuilding.Building.price" required="Number"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Ajouter</button>
+    </form>
+</div>
