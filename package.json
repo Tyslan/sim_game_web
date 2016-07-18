@@ -2,7 +2,8 @@
   "name": "sim-game",
   "main": "server.js",
   "engines": {
-    "node": "4.1.1"
+    "node": "v4.4.3",
+    "npm": "2.15.1"
   },
   "dependencies": {
     "body-parser": "~1.4.2",
@@ -20,6 +21,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "heroku-prebuild": "echo Start installing dependencies.",
+    "heroku-postbuild": "echo All dependencies installed."
   }
 }
