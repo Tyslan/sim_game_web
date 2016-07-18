@@ -39,6 +39,12 @@ angular
           controller: 'AddBuildingController',
           controllerAs: 'vmAddBuilding'
         })
+        .state('Buildings', {
+          url: '/buildings',
+          templateUrl: '/views/buildings.html',
+          controller: 'BuildingController',
+          controllerAs: 'vmBuilding'
+        })
     ;
 
     $urlRouterProvider.otherwise('home');

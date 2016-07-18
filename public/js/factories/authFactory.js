@@ -3,9 +3,9 @@ angular
     .module('SimGameApp')
     .factory('auth', authFactory);
 
-authFactory.$inject = ['$http', '$window'];
+authFactory.$inject = ['$http', '$window', '$state'];
 
-function authFactory($http, $window) {
+function authFactory($http, $window, $state) {
     var auth = {};
 
     auth.saveToken = function (token) {
@@ -51,6 +51,7 @@ function authFactory($http, $window) {
 
     auth.logOut = function () {
         $window.localStorage.removeItem('sim-cité-web-token');
+        $state.go('home');
     };
 
     return auth;

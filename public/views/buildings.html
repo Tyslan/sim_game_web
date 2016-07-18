@@ -1,0 +1,85 @@
+<!-- public/views/buildings.html -->
+
+<div class="page-header">
+    <h1>Bâtiments
+        <small>Liste de bâtiments</small>
+    </h1>
+</div>
+
+
+<div ng-repeat="building in vmBuilding.buildings | orderBy:'-name'">
+
+    <div class="panel panel-primary transparant">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{building.name}}</h3>
+        </div>
+        <div class="panel-body">
+
+            <p>
+                {{building.description}}
+            </p>
+            <p>
+              Prix: € {{building.price}}
+            </p>
+            <p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal"
+                        data-target="#{{building._id}}">
+                    More
+                </button>
+            </p>
+
+            <!-- Modal -->
+            <div class="modal fade" id="{{building._id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">{{building.name}}</h4>
+                        </div>
+                        <div class="modal-header">
+                          <h4 class="modal-title">Déscription</h4>
+
+                          <p>{{building.description}}</p>
+
+                          <h4 class="modal-title">Prix</h4>
+                          <p> €{{building.price}}</p>
+
+                        </div>
+                        <div class="modal-body">
+                          <h4 class="modal-title">Population de base</h4>
+
+                          <p>{{building.basePopulation}}</p>
+
+
+                          <h4 class="modal-title">Touristes de base</h4>
+
+                          <p>{{building.baseTourists}}</p>
+
+                          <h4 class="modal-title">Revenus de base</h4>
+
+                          <p>{{building.baseIncome}}</p>
+
+                          <h4 class="modal-title">Population par tour</h4>
+
+                          <p>{{building.turnPopulation}}</p>
+
+                          <h4 class="modal-title">Touristes par tour</h4>
+
+                          <p>{{building.turnTourists}}</p>
+
+                          <h4 class="modal-title">Revenus par tour</h4>
+
+                          <p>{{building.turnIncome}}</p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
