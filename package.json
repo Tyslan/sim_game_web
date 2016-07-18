@@ -20,6 +20,6 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bower install && node seeder.js"
+    "postinstall": "bower install"
   }
 }
