@@ -3,7 +3,7 @@
 var restful = require('node-restful');
 var mongoose = require('mongoose');
 
-var buidlingSchema = new mongoose.Schema({
+var buildingSchema = new mongoose.Schema({
     name: String,
     description: String,
     basePopulation: Number,
