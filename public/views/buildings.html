@@ -7,7 +7,7 @@
 </div>
 
 
-<div ng-repeat="building in vmBuilding.buildings | orderBy:'-name'">
+<div ng-repeat="building in vmBuilding.buildings | orderBy:'price'">
 
     <div class="panel panel-primary transparant">
         <div class="panel-heading">
@@ -25,7 +25,7 @@
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal"
                         data-target="#{{building._id}}">
-                    More
+                    En savoir plus
                 </button>
             </p>
 
@@ -75,7 +75,7 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
                         </div>
                     </div>
                 </div>
