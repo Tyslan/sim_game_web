@@ -14,7 +14,7 @@ function CityController(CityService, auth) {
     vmCity.loadData = function(){
       CityService.get().then(function (response) {
         vmCity.cities = response.data;
-        vmCity.citiesIsEmpty = vmCity.cities.length === 0;
+        vmCity.citiesIsEmpty = vmCity.cities.length === 0 || vmCity.cities === null;
       });
     };
 }
