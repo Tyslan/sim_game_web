@@ -8,6 +8,5 @@ function BuildingController(BuildingService, auth) {
 
     BuildingService.get().then(function (response) {
       vmBuilding.buildings = response.data;
-      console.log(vmBuilding.buildings);
     });
 }
