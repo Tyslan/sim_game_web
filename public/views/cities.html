@@ -4,6 +4,7 @@
     <h1>Villes
         <small>Classement des villes</small>
     </h1>
+    <button class="btn btn-primary btn-lg" ng-click="vmCity.loadData()">Rafraîchir</button>
 </div>
 
 
@@ -11,7 +12,7 @@
     Pas des jeux actives
 </div>
 
-<div ng-hide="vmCity.citiesIsEmpty" ng-repeat="city in vmCity.cities | orderBy:'money'">
+<div ng-hide="vmCity.citiesIsEmpty" ng-repeat="city in vmCity.cities | orderBy:'-money'">
 
     <div class="panel panel-primary transparant">
         <div class="panel-heading">
