@@ -11,6 +11,7 @@ function AddBuildingController(BuildingService, auth) {
         BuildingService.create(vmAddBuilding.Building)
             .success(function () {
                 vmAddBuilding.succes = 'Bâtiment ajouté';
+                vmAddBuilding.Building = {};
             })
             .error(function(error){
                 vmAddBuilding.error = error;

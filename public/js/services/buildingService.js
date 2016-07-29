@@ -1,4 +1,4 @@
-// public/js/services/MovieService.js
+// public/js/services/buildingService.js
 angular
     .module('SimGameApp')
     .factory('BuildingService', BuildingService);

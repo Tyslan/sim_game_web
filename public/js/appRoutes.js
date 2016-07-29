@@ -45,6 +45,12 @@ angular
           controller: 'BuildingController',
           controllerAs: 'vmBuilding'
         })
+        .state('Cities', {
+          url: '/cityOverview',
+          templateUrl: '/views/cities.html',
+          controller: 'CityController',
+          controllerAs: 'vmCity'
+        })
     ;
 
     $urlRouterProvider.otherwise('home');
