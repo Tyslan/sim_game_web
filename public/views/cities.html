@@ -1,0 +1,35 @@
+<!-- public/views/cities.html -->
+
+<div class="jumbotron text-center transparant">
+    <h1>Villes
+        <small>Classement des villes</small>
+    </h1>
+</div>
+
+
+<div ng-hide="vmCity.citiesIsEmpty">
+    Pas des jeux actives
+</div>
+
+<div ng-hide="vmCity.citiesIsEmpty" ng-repeat="city in vmCity.cities | orderBy:'money'">
+
+    <div class="panel panel-primary transparant">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{city.name}}</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+              Montant disponible: € {{city.money}}
+            </p>
+            <p>
+              Population: {{city.population}}
+            </p>
+            <p>
+              Touristes: {{city.tourists}}
+            </p>
+            <p>
+              Montant tour suivant: € {{city.incomeNextTurn}}
+            </p>
+        </div>
+    </div>
+</div>
